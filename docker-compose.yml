@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    container_name: springboot-docker
+    image: springboot-docker
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: mysql:8.0.27
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Ankdai9x
+      - MYSQL_DATABASE=db_docker

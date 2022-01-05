@@ -1,4 +1,4 @@
-FROM jdk:11
+FROM openjdk:8
 WORKDIR /app
-COPY /target/* /app
-RUN ["java -jar", ""]
+COPY target/springboot-docker-0.0.1-SNAPSHOT.jar springboot-docker.jar
+ENTRYPOINT ["java", "-jar", "springboot-docker.jar"]
