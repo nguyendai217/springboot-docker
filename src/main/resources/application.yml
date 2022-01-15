@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Ankdai9x
-    url: jdbc:mysql://localhost:3306/db_docker?useSSL=false
+    url: jdbc:mysql://mysqldb:3306/db_docker?createDatabaseIfNotExist=true
   jpa:
     show-sql: true
     generate-ddl: true
