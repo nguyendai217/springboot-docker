@@ -13,4 +13,9 @@ public class BookController {
     public String test() {
         return "Hello, Test!";
     }
+    
+    @GetMapping("/test2")
+    public String test2() {
+        return "Hello, Test2!";
+    }
 }
